@@ -737,7 +737,6 @@ body {
     position: relative;
     background-color: #954CED;
     height: 57px;
-    margin-top: 7px;
     margin-right: 60px;
     padding: 16px 30px;
     border-radius: 16px;
@@ -853,7 +852,7 @@ body {
     height: 57px;
 }
 
-.section-footer__contacts span {
+.section-footer__contacts h3 {
     font-size: 20px;
     line-height: 25px;
     font-weight: 500;
@@ -861,17 +860,55 @@ body {
 }
 
 .section-footer__contacts div {
-    width: 182px;
-    height: 57px;
-    border-radius: 16px;
-    padding: 16px 30px;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+    position: relative;
     background-color: #954CED;
-    color: white;
+    height: 57px;
+    margin-right: 60px;
+    padding: 16px 30px;
+    border-radius: 16px;
+    font-weight: 600;
     font-size: 20px;
     line-height: 25px;
-    font-weight: 600;
-    margin-left: 86px;
-    margin-right: 20px;
+    overflow: hidden;
+    transition: background-color .2s ease, border-color .2s ease, color .2s ease, fill .2s ease, transform .2s ease-in-out;    will-change: transform;
+}
+
+.section-footer__contacts div span {
+    margin-top: auto;
+    margin-bottom: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.section-footer__contacts div:after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -0;
+    transform: translate(-100%) rotate(10deg);
+    transform-origin: top left;
+    transition: background-color .2s ease, border-color .2s ease, color .2s ease, fill .2s ease, transform .2s ease-in-out;    will-change: transform;
+    z-index: -1;
+    border-radius: 16px;
+    background-color: #512883;
+
+}
+
+.section-footer__contacts div:hover:after {
+    transform: translate(0);
+    z-index: 0;
+}
+
+.section-footer__contacts div:hover {
+    transform: scale(1.07);
+    border: 2px solid #944ced;
 }
 
 .section-footer__logo {
@@ -906,4 +943,56 @@ body {
     line-height: 20px;
     font-weight: 400;
     color: #B9B9B9;
+}
+
+.cookie {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 30px;
+    width: 1285px;
+    height: 117px;
+    padding: 30px;
+    border-radius: 16px;
+    background-color: white;
+    z-index: 99;
+}
+
+.cookie span {
+    font-size: 20px;
+    line-height: 28px;
+    color: #383838;
+    font-weight: 300;
+    width: 783px;
+}
+
+.cookie__accept {
+    width: 124px;
+    height: 57px;
+    border-radius: 16px;
+    padding: 16px 30px;
+    color: white;
+    background-color: #954CED;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cookie__decline {
+    width: 124px;
+    height: 57px;
+    border-radius: 16px;
+    border: 2px solid #954CED;
+    text-align: center;
+    margin-left: 20px;
+    color: black;
+    cursor: pointer;
+}
+
+.cookie div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
 }
