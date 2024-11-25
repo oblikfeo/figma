@@ -8,9 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Grandstander:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script src="index.js" defer></script>
 </head>
 <body>
-
 
     <div class="header">
         <div class="header__top">
@@ -215,6 +215,7 @@
             </div>
         </div>
     </div>
+
     <div class="section-cookie">
         <div class="section-cookie__cookie">
             <span>
@@ -226,5 +227,60 @@
             </div>
         </div>    
     </div>
+
+    <div class="overlay"></div>
+
+        <dialog class="modal">
+            <div class="modal__data">
+
+                <div class="modal__data-name">
+                        <div>
+                            Name
+                            <span>*</span>
+                        </div>
+                        <input placeholder="Enter name">
+                </div>
+                <div class="modal__data-email">
+                    <div>
+                        Email
+                        <span>*</span>
+                    </div>
+                    <input placeholder="Enter email">
+                </div>
+                <div class="modal__data-number">
+                    <div>
+                        Phone number
+                        <span>*</span>
+                    </div>
+                    <input placeholder="+7 999 456 95 84">
+                </div>
+                <div class="modal__data-company">
+                    <div>
+                        Name
+                    </div>
+                    <input placeholder="Enter company">
+                </div>
+                <div class="modal__data-website">
+                    <div>
+                        Website/Store URL
+                    </div>
+                    <input placeholder="Enter Website/Store URL">
+                </div>
+            </div>
+            <div class="modal__terms">
+                By submitting this form you are agreeing to Budss’s <a>Privacy Policy</a> and <a>Terms of Use</a>
+            </div>
+            <div class="modal__button">Contact sales</div>
+            <div class="modal__close">
+                <img src="img/icon-button.svg" alt="">
+            </div>
+        </dialog>
+
+        <dialog class="thank">
+            <img src="img/Frame26.svg" alt="">
+            <h2>Thank you!</h2>
+            <h3>Thank you, we have received your application and will contact you soon!</h3>
+            <div class="thank__super">Super!</div>
+        </dialog>
 </body>
 </html>
