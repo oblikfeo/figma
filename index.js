@@ -30,6 +30,12 @@ function modalSale() {
 function close() {
     overlay.style.position = ''
     modal.style.display = 'none'
+    errorSubmit.forEach(function(each) {
+        each.style.display = 'none'
+    })
+    nameInput.style.borderColor = '#181818';
+    emailInput.style.borderColor = '#181818';
+    phoneInput.style.borderColor = '#181818';
 }
 
 function thank() {
@@ -40,6 +46,12 @@ function thank() {
 function exit() {
     thankModal.style.display = 'none'
     overlay.style.position = ''
+    errorSubmit.forEach(function(each) {
+        each.style.display = 'none'
+    })
+    nameInput.style.borderColor = '#181818';
+    emailInput.style.borderColor = '#181818';
+    phoneInput.style.borderColor = '#181818';
 }
 
 saleBut.forEach(function(each) {
@@ -55,15 +67,32 @@ superBut.addEventListener('click', exit)
 const nameInput = document.querySelector('.modal__data-name input');
 const emailInput = document.querySelector('.modal__data-email input');
 const phoneInput = document.querySelector('.modal__data-number input');
-const submitButton = document.querySelector('.modal__button');
+const buttonContainer = document.querySelector('.modal__button-container');
+
+buttonSend.disabled = true;
 
 function checkInputs() {
     if (nameInput.value && emailInput.value && phoneInput.value) {
-        submitButton.style.backgroundColor = '#954CED';
+        buttonSend.style.backgroundColor = '#954CED';
+        buttonSend.disabled = false;
+        buttonSend.style.pointerEvents = 'auto'
     } else {
-        submitButton.style.backgroundColor = '#B9B9B9';
+        buttonSend.style.backgroundColor = '#B9B9B9';
+        buttonSend.disabled = true;
+        buttonSend.style.pointerEvents = 'none';
     }
 }
+
+const errorSubmit = document.querySelectorAll('.modal__data-name h4, .modal__data-email h4, .modal__data-number h4, .modal h3')
+
+buttonContainer.addEventListener('click', function() {
+    errorSubmit.forEach(function(each) {
+        each.style.display = 'block'
+    })
+    nameInput.style.borderColor = 'red';
+    emailInput.style.borderColor = 'red';
+    phoneInput.style.borderColor = 'red';
+})
 
 nameInput.addEventListener('input', checkInputs);
 emailInput.addEventListener('input', checkInputs);

@@ -231,14 +231,15 @@
     <div class="overlay"></div>
 
         <dialog class="modal">
-            <div class="modal__data">
 
+            <div class="modal__data">
                 <div class="modal__data-name">
                         <div>
                             Name
                             <span>*</span>
                         </div>
                         <input placeholder="Enter name">
+                        <h4>This field is required.</h4>
                 </div>
                 <div class="modal__data-email">
                     <div>
@@ -246,6 +247,7 @@
                         <span>*</span>
                     </div>
                     <input placeholder="Enter email">
+                    <h4>This field is required.</h4>
                 </div>
                 <div class="modal__data-number">
                     <div>
@@ -253,6 +255,7 @@
                         <span>*</span>
                     </div>
                     <input placeholder="+7 999 456 95 84">
+                    <h4>This field is required.</h4>
                 </div>
                 <div class="modal__data-company">
                     <div>
@@ -267,13 +270,21 @@
                     <input placeholder="Enter Website/Store URL">
                 </div>
             </div>
+
+            <h3>This field is required.</h3>
+
             <div class="modal__terms">
                 By submitting this form you are agreeing to Budss’s <a>Privacy Policy</a> and <a>Terms of Use</a>
             </div>
-            <div class="modal__button">Contact sales</div>
+
+            <div class="modal__button-container">
+                <button class="modal__button">Contact sales</button>
+            </div>
+
             <div class="modal__close">
                 <img src="img/icon-button.svg" alt="">
             </div>
+
         </dialog>
 
         <dialog class="thank">
